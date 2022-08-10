@@ -1,0 +1,358 @@
+/*
+Galleries
+
+markup:
+<div class="gallery">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="gallery-item">
+        <div class="gallery-item__image-block">
+          <a class="gallery-item__image-link gallery-item__image-link--rounded-corners" aria-label="" href="#">
+            <img class="gallery-item__image gallery-item__image--rounded-corners" alt="" src="https://alpha.leicester.gov.uk/media/ffglj4gq/4.jpg?anchor=center&amp;mode=crop&amp;quality=80&amp;width=200&amp;height=200&amp;rnd=132719406994070000">
+          </a>
+        </div>
+        <div class="gallery-item__text-block">
+          <div class="gallery-item__title">
+            <a class="gallery-item__title-link" href="#">Gallery Item Text</a>
+          </div>
+          <div class="gallery-item__summary">
+            <p>Gallery Item Summary</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="gallery-item">
+        <div class="gallery-item__image-block">
+          <a class="gallery-item__image-link gallery-item__image-link--rounded-corners" aria-label="" href="#">
+            <img class="gallery-item__image gallery-item__image--rounded-corners" alt="" src="https://alpha.leicester.gov.uk/media/ffglj4gq/4.jpg?anchor=center&amp;mode=crop&amp;quality=80&amp;width=200&amp;height=200&amp;rnd=132719406994070000">
+          </a>
+        </div>
+        <div class="gallery-item__text-block">
+          <div class="gallery-item__title">
+            <a class="gallery-item__title-link" href="#">Gallery Item Text</a>
+          </div>
+          <div class="gallery-item__summary">
+            <p>Gallery Item Summary</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="gallery-item">
+        <div class="gallery-item__image-block">
+          <a class="gallery-item__image-link gallery-item__image-link--rounded-corners" aria-label="" href="#">
+            <img class="gallery-item__image gallery-item__image--rounded-corners" alt="" src="https://alpha.leicester.gov.uk/media/ffglj4gq/4.jpg?anchor=center&amp;mode=crop&amp;quality=80&amp;width=200&amp;height=200&amp;rnd=132719406994070000">
+          </a>
+        </div>
+        <div class="gallery-item__text-block">
+          <div class="gallery-item__title">
+            <a class="gallery-item__title-link" href="#">Gallery Item Text</a>
+          </div>
+          <div class="gallery-item__summary">
+            <p>Gallery Item Summary</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="gallery-item">
+        <div class="gallery-item__image-block">
+          <a class="gallery-item__image-link gallery-item__image-link--rounded-corners" aria-label="" href="#">
+            <img class="gallery-item__image gallery-item__image--rounded-corners" alt="" src="https://alpha.leicester.gov.uk/media/ffglj4gq/4.jpg?anchor=center&amp;mode=crop&amp;quality=80&amp;width=200&amp;height=200&amp;rnd=132719406994070000">
+          </a>
+        </div>
+        <div class="gallery-item__text-block">
+          <div class="gallery-item__title">
+            <a class="gallery-item__title-link" href="#">Gallery Item Text</a>
+          </div>
+          <div class="gallery-item__summary">
+            <p>Gallery Item Summary</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="gallery-item">
+        <div class="gallery-item__image-block">
+          <a class="gallery-item__image-link gallery-item__image-link--rounded-corners" aria-label="" href="#">
+            <img class="gallery-item__image gallery-item__image--rounded-corners" alt="" src="https://alpha.leicester.gov.uk/media/ffglj4gq/4.jpg?anchor=center&amp;mode=crop&amp;quality=80&amp;width=200&amp;height=200&amp;rnd=132719406994070000">
+          </a>
+        </div>
+        <div class="gallery-item__text-block">
+          <div class="gallery-item__title">
+            <a class="gallery-item__title-link" href="#">Gallery Item Text</a>
+          </div>
+          <div class="gallery-item__summary">
+            <p>Gallery Item Summary</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="gallery-item">
+        <div class="gallery-item__image-block">
+          <a class="gallery-item__image-link gallery-item__image-link--rounded-corners" aria-label="" href="#">
+            <img class="gallery-item__image gallery-item__image--rounded-corners" alt="" src="https://alpha.leicester.gov.uk/media/ffglj4gq/4.jpg?anchor=center&amp;mode=crop&amp;quality=80&amp;width=200&amp;height=200&amp;rnd=132719406994070000">
+          </a>
+        </div>
+        <div class="gallery-item__text-block">
+          <div class="gallery-item__title">
+            <a class="gallery-item__title-link" href="#">Gallery Item Text</a>
+          </div>
+          <div class="gallery-item__summary">
+            <p>Gallery Item Summary</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="gallery-item">
+        <div class="gallery-item__image-block">
+          <a class="gallery-item__image-link gallery-item__image-link--rounded-corners" aria-label="" href="#">
+            <img class="gallery-item__image gallery-item__image--rounded-corners" alt="" src="https://alpha.leicester.gov.uk/media/ffglj4gq/4.jpg?anchor=center&amp;mode=crop&amp;quality=80&amp;width=200&amp;height=200&amp;rnd=132719406994070000">
+          </a>
+        </div>
+        <div class="gallery-item__text-block">
+          <div class="gallery-item__title">
+            <a class="gallery-item__title-link" href="#">Gallery Item Text</a>
+          </div>
+          <div class="gallery-item__summary">
+            <p>Gallery Item Summary</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="gallery-item">
+        <div class="gallery-item__image-block">
+          <a class="gallery-item__image-link gallery-item__image-link--rounded-corners" aria-label="" href="#">
+            <img class="gallery-item__image gallery-item__image--rounded-corners" alt="" src="https://alpha.leicester.gov.uk/media/ffglj4gq/4.jpg?anchor=center&amp;mode=crop&amp;quality=80&amp;width=200&amp;height=200&amp;rnd=132719406994070000">
+          </a>
+        </div>
+        <div class="gallery-item__text-block">
+          <div class="gallery-item__title">
+            <a class="gallery-item__title-link" href="#">Gallery Item Text</a>
+          </div>
+          <div class="gallery-item__summary">
+            <p>Gallery Item Summary</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="gallery-item">
+        <div class="gallery-item__image-block">
+          <a class="gallery-item__image-link gallery-item__image-link--rounded-corners" aria-label="" href="#">
+            <img class="gallery-item__image gallery-item__image--rounded-corners" alt="" src="https://alpha.leicester.gov.uk/media/ffglj4gq/4.jpg?anchor=center&amp;mode=crop&amp;quality=80&amp;width=200&amp;height=200&amp;rnd=132719406994070000">
+          </a>
+        </div>
+        <div class="gallery-item__text-block">
+          <div class="gallery-item__title">
+            <a class="gallery-item__title-link" href="#">Gallery Item Text</a>
+          </div>
+          <div class="gallery-item__summary">
+            <p>Gallery Item Summary</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+Styleguide 6.6
+*/
+
+.gallery {
+  padding: 1em 0;
+  &--carousel {
+    overflow: hidden;
+    padding: 0.5em;
+  }
+  &-item {
+    padding: 0.5em;
+    &__image {
+      padding: 1em;
+      border: 1px $dark-grey solid;
+      display: block;
+      width: 100%;
+      max-width: 13.75em;
+      max-height: 13.7em;
+      @include border-radius;
+      &-link {
+        display: block;
+        transition: 0.2s ease-out 0.01s;
+        width: 100%;
+        max-height: 13.75em;
+        max-width: 13.75em;
+        @include border-radius;
+        @include hover-state {
+          box-shadow: 0 0 0.375em 0.0625em rgba(0, 0, 0, 0.8);
+        }
+      }
+    }
+    &__text-block {
+      padding: 0.5em 0 0.5em 0;
+    }
+    &__title {
+      &-link {
+        font-size: 1.4em;
+        color: $grey;
+        @include hover-state {
+          color: $primary-color;
+        }
+      }
+    }
+    &__summary {
+      line-height: 1.5;
+    }
+  }
+
+  &__button {
+    @include button-shadow;
+    @include button-radius;
+    display: block;
+    width: 75%;
+    position: relative;
+    padding: 1em 1.5em;
+    margin-bottom: 1em;
+    background-color: $secondary-color;
+    color: $grey;
+    text-align: center;
+    text-decoration: none;
+//    @include media-breakpoint-down(xs) {
+//      width: 100%;
+//    }
+    @include hover-state {
+      background-color: $orange-hover;
+    }
+  }
+}
+
+.lightbox {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+//  @include media-breakpoint-up(md){
+//    top: 12em;
+//  }
+  left: 50%;
+  width: 100%;
+  padding: 0 1em;
+  transform: translate(-50%, -50%);
+
+  &-container {
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &__overlay {
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    cursor: pointer;
+  }
+  &__close {
+    color: $white;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: 2em;
+    padding: 0.5em;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 1;
+    @include hover-state {
+      color: $white;
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin: 0;
+    padding: 1em 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  &__image {
+    object-fit: cover;
+//    @include media-breakpoint-down(md) {
+//     @media only screen and (orientation: landscape) {
+//       max-height: 15.5em;
+//      }
+//    }
+  }
+
+  &__caption {
+    color: $white;
+    display: inline-block;
+  }
+
+  &__numbers {
+    color: $white;
+    font-size: 0.75em;
+    float: right;
+  }
+
+  &__prev, &__next {
+    cursor: pointer;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 0.5em;
+    margin-top: -1em;
+    color: $white;
+    font-size: 2em;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    @include hover-state {
+      color: $white;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+  &__next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+}
+
+
+.carousel {
+  &__pagination {
+    text-align: center;
+  }
+  &__dot {
+    font-size: 2em;
+    color: $blue;
+    padding: 0.5em;
+    @include hover-state {
+      cursor: pointer;
+    }
+    &--active {
+      color: $secondary-color;
+    }
+  }
+  &__arrow {
+    font-size: 3em;
+    color: $secondary-color;
+    width: 50%;
+    &--active {
+      color: $blue;
+    }
+  }
+  &__next {
+    float: right;
+  }
+}

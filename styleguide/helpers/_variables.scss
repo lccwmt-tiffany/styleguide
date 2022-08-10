@@ -1,0 +1,88 @@
+
+
+$white: #fff;
+$black: #000;
+$teal: #005961;
+$teal-hover: #0b7f99;
+$orange: #fa5;
+$orange-hover: #ff9124;
+$blue: #d4e5e6;
+$grey: #222;
+$light-grey: #eeeff0;
+$dark-grey: #d3d3d3;
+
+// Cantarus branding
+
+$peacock: #00363A;
+$mint: #9FE1B5;
+$pistachio: #E6F7D7;
+
+// primary shades
+
+$primary-peacock: $peacock;
+$primary-mint: $mint;
+$primary-pistachio: $pistachio;
+
+// supporting palettes
+
+$wood: #6F4D4C;
+$coral: #FF6F61;
+$peach: #F7B29D;
+$papaya: #FFEED6;
+$navy: #322288;
+$violet: #6C099D;
+$echo: #738EC5;
+$periwinkle: #D4DCF6;
+$berry: #830548;
+$magenta: #BE1989;
+$rouge: #E65982;
+$primrose: #F5D3E8;
+
+$supporting-wood: $wood;
+$supporting-coral: $coral;
+$supporting-peach: $peach;
+$supporting-papaya: $papaya;
+
+$supporting-navy: $navy;
+$supporting-violet: $violet;
+$supporting-echo: $echo;
+$supporting-periwinkle: $periwinkle;
+
+$supporting-berry: $berry;
+$supporting-magenta: $magenta;
+$supporting-rouge: $rouge;
+$supporting-primrose: $primrose;
+
+
+//below are mostly used on banners
+$twitter-blue: #8ce4f7;
+$lime-green: #9FBC1B;
+$dark-orange: #FF8411;
+
+$primary-font: "inter", Arial, sans-serif;
+
+$primary-color: $teal;
+$secondary-color: $orange;
+$tertiary-color: $blue;
+
+$button-radius: 0.8em;
+
+$standard-alert: #d1e172;
+$warning-alert: #fed565;
+$emergency-alert: #960000;
+
+//any new color combos added to this list will automagically be added to the CSS (background first, text colour second, hover text colour third)
+$color-combos: (
+  black: ($black, $white, $white),
+  white: ($white, $black, $black),
+  blue: ($twitter-blue, $black, $black),
+  orange: ($orange, $black, $black),
+  dark-orange: ($dark-orange, $black, $black),
+  lime: ($lime-green, $black, $black),
+  teal: ($teal, $white, $white),
+  peacock: ($peacock, $white, $white),
+  mint: ($mint, $black, $black),
+  pistacho: ($pistachio, $black, $black)
+);
+
+

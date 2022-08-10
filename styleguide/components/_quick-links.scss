@@ -1,0 +1,53 @@
+/*
+Quick-Links
+
+Components that are used for creating content on pages
+
+Markup:
+<div id="quicklinks" class="jump-to">
+        <h2>Quick links</h2>
+        <ul class="quick-links">
+          <li class="quick-links__item">
+              <a href="#" class="quick-links__link">
+                  <div class="row">
+                      <div class="col-3 col-sm-2 col-lg-2">
+                          <span class="quick-links__icon fa fa-arrow-right"></span>
+                      </div>
+                      <div class="col-9 col-sm-10 col-lg-10 d-flex align-items-center">
+                          <span class="quick-links__text">An example of a quick link</span>
+                      </div>
+                  </div>
+              </a>
+          </li>
+        </ul>
+    </div>
+
+sg-wrapper:
+<div class="row">
+  <div class="col-12">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 6.11
+*/
+
+.quick-links {
+  @include no-bullets;
+  &__item {
+    padding: 0.5em 0;
+  }
+  &__link {
+    @include teal-links;
+    @include underline-only-on-hover;
+    text-align: center;
+  }
+  &__icon {
+    color: $secondary-color;
+    font-size: 3em;
+  }
+  &__text {
+    font-weight: 600;
+    text-align: left;
+  }
+}

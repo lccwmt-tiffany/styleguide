@@ -1,0 +1,53 @@
+/*
+Jump Navigation
+
+Styleguide 5.7
+*/
+
+.jump-nav {
+  display: none;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  padding: 0.5em 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.9);
+  border: $dark-grey 1px solid;
+//  @include media-breakpoint-down(sm) {
+//    background: $white;
+//  }
+
+  &__list {
+    margin: 0;
+    padding: 0 0.5em;
+    display: flex;
+  }
+
+  &__item {
+    display: block;
+    padding: 0.5em 1em;
+    margin: 0 1em;
+    text-align: center;
+    border-radius: 2em;
+    color: $grey;
+//    @include media-breakpoint-down(sm) {
+//      width: 100%;
+//    }
+
+    &--active {
+      background: $primary-color;
+      color: $white;
+      font-weight: 700;
+      text-decoration: none;
+      @include hover-state {
+        color: $white;
+      }
+    }
+
+//    &--mobile-hide {
+//      @include media-breakpoint-down(sm) {
+//        display: none;
+//      }
+//    }
+  }
+}

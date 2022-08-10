@@ -1,0 +1,146 @@
+/*
+Font, Text and Paragraph Styles
+
+The following font known as 'Inter' is a google web font chosen for its accessibility
+
+markup:
+<h2>Standard Paragraph Text</h2>
+<div class="content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+<h2>Summary Paragraph Text</h2>
+<div class="summary"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+
+sg-wrapper:
+<div class="container">
+  <div class="row">
+      <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 2.1
+*/
+
+p {
+  @include default-font;
+}
+
+.summary {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.content {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+
+
+/*
+Headings
+
+markup:
+<h1>H1: Almost before we knew it, we had left the ground</h1>
+<h2>H2: Almost before we knew it, we had left the ground</h2>
+<h3>H3: Almost before we knew it, we had left the ground</h3>
+<h4>H4: Almost before we knew it, we had left the ground</h4>
+<h5>H5: Almost before we knew it, we had left the ground</h5>
+
+sg-wrapper:
+    <div class="container">
+        <sg-wrapper-content/>
+    </section>
+
+Styleguide 2.2
+*/
+h1, h2, h3, h4, h5 {
+  @include no-margin-padding;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+/*
+Links
+
+markup:
+<a class="content" href="/"><p>This is a content link</p></a>
+<a class="summary" href="/"><p>This is a summary link</p></a>
+
+sg-wrapper:
+    <div class="container">
+        <sg-wrapper-content/>
+    </div>
+
+Styleguide 2.3
+*/
+
+a {
+  @include teal-links;
+}
+
+/*
+Lists
+
+Styleguide 2.4
+*/
+
+/*
+Ordered List
+
+markup:
+<ol class="content">
+  <li>This is</li>
+  <li>an ordered</li>
+  <li>list</li>
+</ol>
+
+sg-wrapper:
+<div class="container">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 2.4.1
+*/
+
+/*
+Unordered List
+
+markup:
+<ul class="content">
+  <li>This is</li>
+  <li>an unordered</li>
+  <li>list</li>
+</ul>
+
+sg-wrapper:
+<div class="container">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 2.4.2
+*/
+
+.content p, .content ul, .content ol {
+  max-width: 65ch;
+  word-wrap: break-word;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+

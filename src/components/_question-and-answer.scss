@@ -1,0 +1,62 @@
+/*
+Question and Answers
+
+Components that are used for creating content on pages
+
+markup:
+<div class="qa-block">
+  <button class="qa-block__question-block" tabindex="0" aria-expanded="false" aria-controls="accPanel_1" id="accQPanel_1">
+    <h3 class="qa-block__question-text">Question Text<!--@hSize-->
+      <span class="qa-block__arrow fa fa-chevron-down"></span>
+    </h3>
+  </button>
+  <div class="qa-block__answer-block" id="accPanel_1" aria-labelledby="accQPanel_1" style="display: none;">
+    <p class="qa-block__answer-text"></p><p>Here's some text</p>
+  </div>
+</div>
+
+sg-wrapper:
+<div class="row">
+  <div class="col-md-12 column">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 6.10
+*/
+
+.qa-block {
+    border: 1px solid $light-grey;
+    &__question {
+      &-block {
+        @include button-reset;
+        display: flex;
+        padding: 1em;
+        width: 100%;
+        @include hover-state {
+          background-color: $light-grey;
+        }
+      }
+      &-text {
+        text-align: left;
+      }
+    }
+    &__arrow {
+      padding: 0 .5em;
+      color: $secondary-color;
+      transition: all .5s linear;
+      -moz-transition: all .5s linear;
+      -webkit-transition: all .5s linear;
+      &--up {
+        -ms-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg)
+      }
+    }
+    &__answer {
+      &-block {
+        padding: 0 1em
+      }
+    }
+}

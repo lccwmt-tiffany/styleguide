@@ -1,0 +1,50 @@
+/*
+Bulletpoints
+
+Components that are used for creating content on pages
+
+markup:
+<div class="bulletpoint">
+  <div class="row">
+    <div class="col-3 col-sm-2 col-lg-2">
+      <div class="bulletpoint__icon-align">
+        <span class="bulletpoint__icon fa fa-arrow-right"></span>
+      </div>
+    </div>
+    <div class="col-9 col-sm-10 col-lg-10 align-items-center d-flex">
+      <a href="#" class="bulletpoint__link">
+        <span class="bulletpoint__text">Example Bulletpoint</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+sg-wrapper:
+<div class="row">
+  <div class="col-12">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 6.4
+*/
+
+.bulletpoint {
+  padding: 0.5em 0;
+  max-width: 65ch;
+  &__link {
+    @include teal-links;
+    @include underline-only-on-hover;
+  }
+  &__icon-align {
+    text-align: center;
+  }
+  &__icon {
+    color: $secondary-color;
+    font-size: 3em;
+  }
+  &__text {
+    font-weight: 600;
+    text-align: left;
+  }
+}

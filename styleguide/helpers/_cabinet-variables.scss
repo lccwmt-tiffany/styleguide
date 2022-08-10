@@ -1,0 +1,70 @@
+$box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.2);
+
+// We use these to make sure border radius matches unless we want it different.
+$global-radius: 3px !default;
+$global-rounded: 1000px !default;
+$global-padding: rem-calc(20);
+// We use these to control inset shadow shiny edges and depressions.
+$shiny-edge-size: 0 1px 0 !default;
+$shiny-edge-color: rgba(#fff, .5) !default;
+$shiny-edge-active-color: rgba(#000, .2) !default;
+
+$h1-font-size: rem-calc(38);
+$h2-font-size: rem-calc(30);
+$h3-font-size: rem-calc(25);
+$h4-font-size: rem-calc(22);
+$h5-font-size: rem-calc(20);
+$h6-font-size: rem-calc(18);
+
+$body-bg: #EEEFF0;
+$muted-color: $body-bg;
+$body-font-color: $grey;
+$crumb-font-size: rem-calc(16);
+$button-default-bg: $teal;
+
+// We use these to build padding for buttons.
+$button-tny: rem-calc(10) !default;
+$button-sml: rem-calc(14) !default;
+$button-med: rem-calc(16) !default;
+$button-lrg: rem-calc(18) !default;
+
+// We use this to control the display property.
+$button-display: inline-block !default;
+$button-margin-bottom: rem-calc(20) !default;
+
+// We use these to control button text styles.
+$button-font-color: $white !default;
+$button-font-color-alt: #333 !default;
+$button-font-tny: rem-calc(11) !default;
+$button-font-sml: rem-calc(13) !default;
+$button-font-med: rem-calc(16) !default;
+$button-font-lrg: rem-calc(20) !default;
+$button-font-weight: normal !default;
+$button-font-align: center !default;
+
+// We use these to control various hover effects.
+$button-function-factor: -20% !default;
+$shadow-button-function-factor: -20% !default;
+;
+// We use these to control button border styles.
+$button-border-width: 0px !default;
+$button-border-style: solid !default;
+
+// We use this to set the default radius used throughout the core.
+$button-radius: $global-radius !default;
+$button-round: $global-rounded !default;
+
+// We use this to set default opacity for disabled buttons.
+$button-disabled-opacity: 0.7 !default;
+
+//thumbnails
+// We use these to control border styles
+$thumb-border-style: solid !default;
+$thumb-border-width: 4px !default;
+$thumb-border-color: $white !default;
+$thumb-box-shadow: 0 0 0 1px rgba(#000, .2) !default;
+$thumb-box-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5) !default;
+
+// Radius and transition speed for thumbs
+$thumb-radius: $global-radius !default;
+$thumb-transition-speed: 200ms !default;

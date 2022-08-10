@@ -1,0 +1,13 @@
+.sg-common, html {
+  box-sizing: border-box;
+}
+.sg-common *, html *, .sg-common *:before, html *:before, .sg-common *:after, html *:after {
+  box-sizing: inherit;
+}
+
+.sg-common, body {
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0;
+  background-color: #FFFFFF;
+  color: #222222;
+}

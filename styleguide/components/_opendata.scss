@@ -1,0 +1,82 @@
+/*
+Open Data
+
+Components that are used for inserting Iframes
+
+Styleguide 6.10
+*/
+
+.opendatachart {
+    width: 100%;
+    height: 600px;
+    padding: 0 2em 0 0;
+    border: 0;
+
+//    @include media-breakpoint-down(md) {
+//        height: 450px;
+//    }
+
+//    @include media-breakpoint-down(sm) {
+//        height: 300px;
+//    }
+}
+.opendatachart__legend {
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 0 2em 0 0;
+    height: 100%;
+
+
+    & UL {
+        display: inline;
+        padding-inline-start: 0;
+    }
+
+//    &--title {
+//    }
+
+    &--items {
+        width: 100%;
+        list-style: none;
+    }
+
+    &--vertical li {
+        margin: 10px 0;
+    }
+
+    &--vertical span {
+        border: 1px solid #ccc;
+        width: 12px;
+        height: 12px;
+        margin: 9px;
+        float: left;
+    }
+
+    &--horizontal li {
+        float: left;
+        margin: 10px;
+    }
+
+    &--horizontal span {
+        border: 1px solid #ccc;
+        float: left;
+        margin: 9px;
+    }
+}
+
+.Square {
+    width: 12px;
+    height: 12px;
+}
+
+.Circle {
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+.Line {
+    width: 20px;
+    height: 4px;
+}

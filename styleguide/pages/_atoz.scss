@@ -1,0 +1,76 @@
+/*
+A to Z Index Page
+
+
+Styleguide 7.1
+*/
+
+.atoz {
+  &__panel {
+    @include grey-panel;
+    display: table;
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__letters {
+    max-width: 100% !important; //important to override the max-width: 65ch in typography
+    list-style: none;
+    @include no-margin-padding;
+  }
+
+  &__letter {
+    float: left;
+    padding: 0.5em;
+    @include media-breakpoint-down(sm) {
+      padding: 0.4em;
+    }
+    @include media-breakpoint-down(xs) {
+      padding: 0.3em;
+    }
+  }
+
+  &__letter-link {
+    display: table;
+    height: auto;
+    padding: 1.25em;
+    width: 4em;
+    text-decoration: none;
+    text-align: center;
+    color: $grey;
+    background-color: $secondary-color;
+    @include border-radius;
+    @include hover-state {
+      color: $white;
+      background: $primary-color;
+    }
+    &--current {
+      color: $white;
+      background: $primary-color;
+    }
+  }
+
+  &__results {
+    max-width: 100% !important; //important to override the max-width: 65ch in typography
+    columns: 3;
+    display: inline-block;
+    @include no-bullets;
+    @include media-breakpoint-down(md) {
+      columns: 2;
+    }
+    @include media-breakpoint-down(xs) {
+      columns: 1;
+    }
+  }
+
+  &__results-link {
+    display: inline-block;
+    padding: 1em;
+    @include teal-links;
+    @include media-breakpoint-down(md) {
+      padding: 1.2em;
+      width: 100%;
+    }
+  }
+}

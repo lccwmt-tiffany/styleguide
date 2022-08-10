@@ -1,0 +1,120 @@
+/*
+Banners
+
+<div class="banner" id="banner">
+  <div class="row flex-nowrap" style="transition: all 600ms ease 0s; transform: translate3d(0px, 0px, 0px);">
+    <div class="col-12">
+      <div class="banner__item">
+        <img class="banner__image" alt="" src="/styleguide/images/banners/example_banner.jpg">
+          <div class="banner__caption" aria-live="polite">
+            <div class="banner__header banner__header--black">Banner Heading
+            </div>
+            <div class="banner__text banner__text--black">Caption text
+            </div>
+          </div>
+          <a href="/" class="banner__button banner__button--black banner__button--shadow">Button link
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+sg-wrapper:
+<div class="row">
+  <div class="col-12">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 6.3
+*/
+
+.banner {
+  overflow: hidden;
+  padding: 1em 0;
+  &__image {
+    max-width: 100%;
+//    @include media-breakpoint-up(md) {
+//     height: 400px;
+//      object-fit: cover;
+//    }
+  }
+  &__caption {
+    position: absolute;
+    top: 0;
+    right: 1em;
+    padding: 1em;
+//    @include media-breakpoint-up (lg) {
+//     width: 50%;
+//    }
+//    @include media-breakpoint-down (md) {
+//      position: relative;
+//      top: 0;
+//      right: 0;
+//      padding: 0;
+//    }
+  }
+
+  &__header {
+    padding: 0.5em;
+    margin: 0.5em 0;
+    font-size: 1.5em;
+    font-weight: 700;
+    float: right;
+//    @include media-breakpoint-down(md) {
+//      padding: 0;
+//      float: left;
+//    }
+  }
+  &__text {
+    padding: 0.5em;
+    font-size: 1.3em;
+    float: right;
+    width: 75%;
+//    @include media-breakpoint-down(md) {
+//      padding: 0;
+//      margin: 0;
+//      float: left;
+//      width: 100%;
+//    }
+  }
+  &__button {
+    position: absolute;
+    bottom: 1em;
+    right: 1.5em;
+    padding: 1em;
+    font-size: 1.2em;
+    font-weight: 700;
+    @include button-radius;
+    @include underline-only-on-hover;
+    @include button-shadow;
+//    @include media-breakpoint-down(md) {
+//      float: left;
+//      position: inherit;
+//    }
+  }
+
+//repeats the &__'s to comma seperate, so the colour combos don't have to be repeated
+  &__header, &__text, &__button {
+    @include colour-combos;
+  }
+
+//  &__header, &__text {
+//    @include media-breakpoint-down(md) {
+//      @include background-and-text($white, $black);
+//    }
+//  }
+
+  &__pagination {
+    text-align: center;
+  }
+  &__dot {
+    font-size: 2em;
+    color: $blue;
+    padding: 0.5em;
+    text-decoration: none;
+    &--active {
+      color: $secondary-color;
+    }
+  }
+}

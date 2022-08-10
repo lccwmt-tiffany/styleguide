@@ -1,0 +1,128 @@
+@mixin default-font {
+  font-family: $primary-font;
+  color: $grey;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+@mixin hover-state {
+  &:hover, &:active, &:focus {
+    @content;
+  }
+  &:focus-within {
+    @content;
+  }
+}
+
+@mixin button-reset {
+  @include default-font;
+  @include no-margin-padding;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin underline-only-on-hover {
+  text-decoration: none;
+  @include hover-state {
+    text-decoration: underline;
+  }
+}
+
+@mixin no-margin-padding {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin no-bullets {
+  list-style: none;
+  padding: 0;
+}
+
+@mixin teal-hover {
+  cursor: pointer;
+  background-color: $light-grey;
+  color: $teal;
+  text-decoration: none;
+}
+
+@mixin teal-links {
+  color: $primary-color;
+  @include hover-state {
+    color: $grey;
+  }
+}
+
+@mixin grey-links {
+  color: $grey;
+  text-decoration: none;
+  @include hover-state {
+    text-decoration: underline;
+  }
+}
+
+@mixin border-radius($radius: 1.2em) {
+  &--rounded-corners {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+  }
+}
+
+@mixin grey-panel {
+  &--grey-panel {
+    padding: 1.25em;
+    margin-bottom: 1.25em;
+    background-color: $light-grey;
+  }
+  @include border-radius;
+}
+
+@mixin button-shadow {
+  &--shadow {
+    border: 2px solid $white;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+@mixin button-radius {
+  border-radius: $button-radius;
+}
+
+@mixin button-radius-top {
+  border-radius: $button-radius $button-radius 0 0;
+}
+
+@mixin button-radius-left {
+  border-radius: $button-radius 0 0 $button-radius;
+}
+
+@mixin button-radius-bottom {
+  border-radius: 0 0 $button-radius $button-radius;
+}
+
+@mixin button-radius-right {
+  border-radius: 0 $button-radius $button-radius 0;
+}
+
+@mixin background-and-text($background, $text) {
+  background: $background;
+  color: $text;
+}
+
+@mixin colour-combos {
+  @each $color, $color-combo in $color-combos {
+    $bg-color: nth($color-combo, 1);
+    $txt-color: nth($color-combo, 2);
+    $hov-color: nth($color-combo, 3);
+
+    &--#{$color} {
+      @include background-and-text($bg-color, $txt-color);
+      @include hover-state {
+        color: $hov-color;
+      }
+    }
+  }
+}
+

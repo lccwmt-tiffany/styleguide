@@ -1,0 +1,575 @@
+@import "helpers/_variables";
+@import "helpers/_mixins";
+@import "components/_multi-tab-slider-buttons";
+/*
+Orange Multi-Tab Slider
+
+.orange-button - Orange Button
+
+markup:
+		<div class="tab__content tab__content--orange-buttons">
+			<div class="orange-button orange-button--shadow">
+				<a class="orange-button__link" href="/your-community/benefits-and-support/">
+					<span class="orange-button__title">Benefits and support</span>
+						<div class="orange-button__image" style="background-image: url('/media/185018/ballpen-blur-computer-port-39665.jpg?anchor=center&amp;mode=crop&amp;width=200&amp;height=200&amp;rnd=132430154731670000')"></div>
+					<div class="orange-button__description">
+						<p>Apply for benefits such as housing benefit and council tax support or manage your online account.</p>
+					</div>
+				</a>
+			</div>
+		</div>
+
+sg-wrapper:
+<div class="row">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 6.8.1
+*/
+
+.orange-button {
+    position: relative;
+    background-color: $secondary-color;
+//    min-height: 12em;
+    border-radius: 1em;
+    flex: 1 1 10.7em;
+    margin: 0.5em;
+    overflow: hidden;
+    @include button-shadow;
+
+    @include media-breakpoint-down(sm) {
+        min-width: 0;
+    }
+
+    &__description {
+        width: 100%;
+        padding-left: 5%;
+        color: $black;
+        overflow: hidden;
+        @include button-radius-bottom;
+    }
+
+    &__link {
+        @include grey-links;
+
+        @include hover-state {
+            text-decoration: none;
+            outline: none;
+            background: $orange-hover;
+        }
+    }
+
+    &__title {
+        display: block;
+        text-align: center;
+        line-height: 1.4em;
+        padding: 0.3125em;
+        position: relative;
+        z-index: 2;
+        background-color: $secondary-color;
+        @include button-radius-top;
+    }
+
+    &__image {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 1%;
+        opacity: 1;
+        transition: top .3s ease-out .3s;
+        @include button-radius;
+    }
+
+    @include hover-state {
+        background-color: $orange-hover;
+        z-index: 20;
+        height: auto;
+
+        .orange-button__image {
+            top: 100%;
+        }
+    }
+}
+
+.tab {
+	&__header {
+		position: relative;
+		display: block;
+		margin-top: 0.5em;
+		height: 3em;
+		border-radius: 1.25em;
+		border: 0.0625em solid $dark-grey;
+		transition: display 1s;
+		@include hover-state {
+			outline: none;
+			.tab__header-arrow {
+				background: $teal-hover;
+			}
+		}
+
+		&.is-collapsed {
+			@include media-breakpoint-up(lg){
+				height: 15em;
+				background-color: transparent;
+				float: left;
+			}
+			+ .row {
+				visibility: hidden;
+				height: 0;
+				opacity: 0;
+			}
+		}
+
+	&-link {
+		@include underline-only-on-hover;
+		@include hover-state {
+			outline: none;
+		}
+	}
+	&-arrow {
+		height: 100%;
+		font-size: 1.25em;
+		padding: 0.5em 1em;
+		float: right;
+		background-color: $secondary-color;
+		color: $white;
+		border-radius: 0 1em 1em 0;
+		&.is-expanded {
+			transform: rotate(180deg);
+			border-radius: 1em 0 0 1em;
+		}
+			&.is-collapsed {
+				@include media-breakpoint-up(lg) {
+					height: 2.3em;
+					border-radius: 2em;
+				}
+			}
+
+		&-icon {
+			transition: 0.3s;
+			&.is-collapsed {
+				transform: rotate(90deg);
+			}
+		}
+	}
+	&-text {
+		color: $grey;
+		font-size: 1.4em;
+		line-height: 2em;
+		font-weight: 400;
+		padding-left: 0.5em;
+		&.is-collapsed {
+			@include media-breakpoint-up(lg) {
+				width: 15em;
+				animation: rotateDownRight 0.3s both;
+				position: absolute;
+			}
+		}
+	}
+	&__content {
+		opacity: 1;
+		width: 100%;
+    	padding-top: 0.5em;
+    	display: flex;
+    	flex-wrap: wrap;
+		@include media-breakpoint-up(lg){
+			flex-direction: row;
+		}
+		&--orange-buttons {
+	    display: grid;
+	    grid-template-columns: repeat(1, 1fr);
+			@include media-breakpoint-up(sm){
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+		&--blue-buttons {
+			flex-direction: column;
+		}
+		&--force-wrap {
+			@include media-breakpoint-up(md) {
+				max-height: 30em;
+			}
+		}
+		&--row {
+			flex-direction: row;
+		}
+		&--news, &--newsletter {
+			flex-direction: inherit;
+			max-height: 100%;
+		}
+	}
+
+	&__content-header {
+		font-size: 1.5em;
+		font-weight: 400;
+		&-link {
+			color: $grey;
+			@include underline-only-on-hover
+		}
+	}
+}};
+
+@keyframes rotateDownRight {
+	0% {
+		-webkit-transform-origin: left bottom;
+		-ms-transform-origin: left bottom;
+		transform-origin: left bottom;
+		-webkit-transform: rotate(0);
+		-ms-transform: rotate(0);
+		transform: rotate(0)
+	}
+
+	100% {
+		-webkit-transform-origin: left bottom;
+		-ms-transform-origin: left bottom;
+		transform-origin: left bottom;
+		-webkit-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg)
+	}
+}
+
+@-webkit-keyframes rotateDownRight {
+	0% {
+		-webkit-transform-origin: left bottom;
+		transform-origin: left bottom;
+		-webkit-transform: rotate(0);
+		transform: rotate(0)
+	}
+
+	100% {
+		-webkit-transform-origin: left bottom;
+		transform-origin: left bottom;
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg)
+	}
+}
+
+.latest-news {
+	margin: 0.5em 1em;
+	padding: 0;
+	&__item {
+		line-height: 1.5em;
+		padding: 0.2em;
+	}
+	&__link {
+		@include teal-links;
+		@include underline-only-on-hover
+	}
+	&__your-leicester {
+		width: 100%;
+	}
+}
+
+#MTS [class*='col-'] {
+	@include media-breakpoint-up(lg) {
+		transition: all 0.3s ease-in-out;
+	}
+ }
+
+ .is-expanded + .row .tab__content--orange-buttons {
+	@include media-breakpoint-up(sm){
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@include media-breakpoint-up(md) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	@include media-breakpoint-up(lg){
+		grid-template-columns: repeat(5, 1fr);
+	}
+ }
+
+ /*
+Blue Multi-Tab Slider
+
+.blue-button - Blue Button
+
+markup:
+		<div class="tab__content tab__content--blue-buttons tab__content--force-wrap">
+			<div class="blue-button blue-button--shadow">
+        		<a class="blue-button__link" href="/your-council/city-mayor-peter-soulsby/">
+                	<div class="blue-button__image" style="background-image:url('/media/185081/city-mayor-haymarket-bus-stop-panels.jpg?center=0.36180300911562679,0.515&amp;mode=crop&amp;width=200&amp;height=200&amp;rnd=132443124853570000')"></div>
+            	<span class="blue-button__title">City Mayor - Peter Soulsby</span>
+        		</a>
+			</div>
+		</div>
+
+sg-wrapper:
+<div class="row">
+   <sg-wrapper-content/>
+</div>
+
+Styleguide 6.8.2
+*/
+
+.tab {
+	&__header {
+		position: relative;
+		display: block;
+		margin-top: 0.5em;
+		height: 3em;
+		border-radius: 1.25em;
+		border: 0.0625em solid $dark-grey;
+		transition: display 1s;
+		@include hover-state {
+			outline: none;
+			.tab__header-arrow {
+				background: $teal-hover;
+			}
+		}
+
+		&.is-collapsed {
+			@include media-breakpoint-up(lg){
+				height: 15em;
+				background-color: transparent;
+				float: left;
+			}
+			+ .row {
+				visibility: hidden;
+				height: 0;
+				opacity: 0;
+			}
+		}
+
+	&-link {
+		@include underline-only-on-hover;
+		@include hover-state {
+			outline: none;
+		}
+	}
+	&-arrow {
+		height: 100%;
+		font-size: 1.25em;
+		padding: 0.5em 1em;
+		float: right;
+		background-color: $secondary-color;
+		color: $white;
+		border-radius: 0 1em 1em 0;
+		&.is-expanded {
+			transform: rotate(180deg);
+			border-radius: 1em 0 0 1em;
+		}
+			&.is-collapsed {
+				@include media-breakpoint-up(lg) {
+					height: 2.3em;
+					border-radius: 2em;
+				}
+			}
+
+		&-icon {
+			transition: 0.3s;
+			&.is-collapsed {
+				transform: rotate(90deg);
+			}
+		}
+	}
+	&-text {
+		color: $grey;
+		font-size: 1.4em;
+		line-height: 2em;
+		font-weight: 400;
+		padding-left: 0.5em;
+		&.is-collapsed {
+			@include media-breakpoint-up(lg) {
+				width: 15em;
+				animation: rotateDownRight 0.3s both;
+				position: absolute;
+			}
+		}
+	}
+	&__content {
+		opacity: 1;
+		width: 100%;
+    padding-top: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+		@include media-breakpoint-up(lg){
+			flex-direction: row;
+		}
+		&--orange-buttons {
+	    display: grid;
+	    grid-template-columns: repeat(1, 1fr);
+			@include media-breakpoint-up(sm){
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+		&--blue-buttons {
+			flex-direction: column;
+		}
+		&--force-wrap {
+			@include media-breakpoint-up(md) {
+				max-height: 30em;
+			}
+		}
+		&--row {
+			flex-direction: row;
+		}
+		&--news, &--newsletter {
+			flex-direction: inherit;
+			max-height: 100%;
+		}
+	}
+
+	&__content-header {
+		font-size: 1.5em;
+		font-weight: 400;
+		&-link {
+			color: $grey;
+			@include underline-only-on-hover
+		}
+	}
+}};
+
+@keyframes rotateDownRight {
+	0% {
+		-webkit-transform-origin: left bottom;
+		-ms-transform-origin: left bottom;
+		transform-origin: left bottom;
+		-webkit-transform: rotate(0);
+		-ms-transform: rotate(0);
+		transform: rotate(0)
+	}
+
+	100% {
+		-webkit-transform-origin: left bottom;
+		-ms-transform-origin: left bottom;
+		transform-origin: left bottom;
+		-webkit-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg)
+	}
+}
+
+@-webkit-keyframes rotateDownRight {
+	0% {
+		-webkit-transform-origin: left bottom;
+		transform-origin: left bottom;
+		-webkit-transform: rotate(0);
+		transform: rotate(0)
+	}
+
+	100% {
+		-webkit-transform-origin: left bottom;
+		transform-origin: left bottom;
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg)
+	}
+}
+
+.latest-news {
+	margin: 0.5em 1em;
+	padding: 0;
+	&__item {
+		line-height: 1.5em;
+		padding: 0.2em;
+	}
+	&__link {
+		@include teal-links;
+		@include underline-only-on-hover
+	}
+	&__your-leicester {
+		width: 100%;
+	}
+}
+
+#MTS [class*='col-'] {
+	@include media-breakpoint-up(lg) {
+		transition: all 0.3s ease-in-out;
+	}
+ }
+
+ .is-expanded + .row .tab__content--orange-buttons {
+	@include media-breakpoint-up(sm){
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@include media-breakpoint-up(md) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	@include media-breakpoint-up(lg){
+		grid-template-columns: repeat(5, 1fr);
+	}
+ }
+
+ .blue-button {
+    position: relative;
+    background-color: $tertiary-color;
+    width: 100%;
+    min-height: 5em;
+    margin: 0.5em 0;
+    transition: background-color 300ms ease-out 0.01s;
+    @include button-radius;
+    @include button-shadow;
+
+    @include hover-state {
+        background-color: $secondary-color;
+    }
+
+    &__link {
+        @include grey-links;
+
+        @include hover-state {
+            outline: none;
+        }
+    }
+
+    &__title {
+        display: block;
+        line-height: 1.4em;
+        padding: 0.625em 0.625em 0.625em 33%;
+    }
+
+    &__image {
+        background-size: cover;
+        position: absolute;
+        height: 100%;
+        width: 30%;
+        max-width: 9.37em;
+        @include button-radius-left;
+
+       @include media-breakpoint-down(sm) {
+          background-repeat: no-repeat;
+          background-size: auto;
+        }
+    }
+}
+
+.col-xl-6 .blue-button {
+   @include media-breakpoint-up(md) {
+       max-width: 30%;
+    }
+
+   @include media-breakpoint-up(xl) {
+        max-width: 49%;
+       margin: 0.5em;
+    }
+ }
+
+ .tab__content--row .blue-button {
+   @include media-breakpoint-down(sm) {
+       width: 47%;
+       margin: 0.5em;
+   }
+
+   @include media-breakpoint-down(xs) {
+       width: 100%;
+   }
+}
+
+.is-expanded + .row .tab__content--row .blue-button {
+    margin: 0.5em;
+
+   @include media-breakpoint-up(sm) {
+       width: 47%;
+   }
+
+    @include media-breakpoint-up(lg) {
+        width: 30%;
+    }
+}
+
+.tab__content--row .blue-button + .sr-only {
+    width: 0;
+}

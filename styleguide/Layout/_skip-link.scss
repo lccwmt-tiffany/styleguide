@@ -1,0 +1,16 @@
+/*
+Skip-Links
+
+Styleguide 4.8
+*/
+
+.skip {
+  left: -9000px;
+  position: absolute;
+  @include hover-state {
+    left: 0;
+  }
+  &__link {
+    color: $grey;
+  }
+}

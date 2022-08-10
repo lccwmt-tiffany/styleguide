@@ -1,0 +1,99 @@
+/*
+Primary Colours
+
+Our primary colour is Teal.  This should be used across our communications.  It is supported by our primary shades (Peacock, Mint and Pistachio) to create compositions for Leicester City Council and its brand identity.
+
+$primary-color - #005961 'Teal'
+
+markup:
+<div style="background: $teal;" class="primary-color styleguide-color">$teal</div>
+
+Styleguide 4.1
+*/
+
+.primary-color {
+    @include colour-combos;
+}
+
+/*
+Primary Shades
+
+The primary shades are designed to compliment the main primary colour. Typically these would be used for hover, focus and similar effects
+
+$primary-peacock - #00363A 'Peacock'
+$primary-mint - #9FE1B5 'Mint'
+$primary-pistachio - #E6F7D7 'Pistachio'
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 4.2
+*/
+
+/*
+Secondary Colours
+
+Supporting Colour Palette 1
+
+To add variation and depth to our communications we have a strong set of supporting colours available.  They can be used as block colours or mixed to create gradients.
+
+$supporting-wood - #6F4D4C 'Wood'
+$supporting-coral - #FF6F61 'Coral'
+$supporting-peach - #F7B29D 'Peach'
+$supporting-papaya - #FFEED6 'Papaya'
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 4.3
+*/
+
+/*
+Supporting Colour Palette 2
+
+To add variation and depth to our communications we have a strong set of supporting colours available.  They can be used as block colours or mixed to create gradients.
+
+$supporting-navy - #322288 'Navy'
+$supporting-violet - #6C099D 'Violet'
+$supporting-echo - #738EC5 'Echo'
+$supporting-periwinkle - #D4DCF6 'Periwinkle'
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 4.4
+*/
+
+/*
+Supporting Colour Palette 3
+
+
+
+$supporting-berry - #830548 'Berry'
+$supporting-magenta - #BE1989 'Magenta'
+$supporting-rouge - #E65982 'Rouge'
+$supporting-primrose - #F5D3E8 'Primrose'
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 4.5
+*/
+
+/*
+Other Colors
+
+The primary shades are designed to compliment the main primary colour. Typically these would be used for hover, focus and similar effects
+
+$blue - #d4e5e6 'blue'
+$orange - #fa5 'Orange'
+$orange-hover - #ff9124 'Orange-hover'
+$grey - #222 'grey'
+$light-grey - #eeeff0 'light-grey'
+$dark-grey - #d3d3d3 'dark-grey'
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 4.6
+*/

@@ -1,0 +1,107 @@
+@import "helpers/_variables";
+
+/*
+Containers
+
+All containers are placeholders that set the default light grey background
+
+markup:
+<div class="container">Default Container</div>
+
+sg-wrapper:
+    <div style="height: 200px; border-style: solid; border-color: grey;" class="container">
+        <sg-wrapper-content/>
+    </div>
+
+
+Styleguide 1.1
+*/
+
+.container {
+  background: $light-grey;
+  &--no-background {
+      background: none;
+  }
+}
+
+/*
+Breakpoints
+
+Global breakpoints for containers
+
+Styleguide 1.2
+*/
+
+/*
+Mobile
+
+576px -> 768px
+
+markup:
+<div class="container"></div>
+
+sg-wrapper:
+    <div style="height: 50px; width: 100%; max-width: 768px; border-style: solid; border-color: #d3d3d3; background-color: #eeeff0;">
+          <div class="container">
+            <sg-wrapper-content/>
+          </div>
+    </div>
+
+Styleguide 1.2.1
+*/
+
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/*
+Tablet
+
+768px -> 992px
+
+markup:
+<div class="container"></div>
+
+sg-wrapper:
+    <div style="height: 50px; width: 100%; max-width: 992px; border-style: solid; border-color: #d3d3d3; background-color: #eeeff0;">
+          <div class="container">
+            <sg-wrapper-content/>
+          </div>
+    </div>
+
+Styleguide 1.2.2
+*/
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 992px;
+  }
+}
+
+/*
+Desktop
+
+992px -> 1280px
+
+markup:
+<div class="container"></div>
+
+sg-wrapper:
+    <div style="height: 50px; width: 100%; max-width: 1280px; border-style: solid; border-color: #d3d3d3; background-color: #eeeff0;">
+          <div class="container">
+            <sg-wrapper-content/>
+          </div>
+    </div>
+
+Styleguide 1.2.3
+*/
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+

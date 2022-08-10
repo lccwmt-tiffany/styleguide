@@ -1,0 +1,29 @@
+/*
+Quick-Links
+
+Components that are used for creating content on pages
+
+Styleguide 6.14
+*/
+
+.teal-button {
+    @include button-reset;
+    width: 100%;
+    position: relative;
+    padding: 1em 1.5em;
+    margin: 1em 0;
+    background-color: $primary-color;
+    color: $white;
+    text-align: center;
+    border: 3px solid $teal;
+    @include button-radius;
+    @include hover-state {
+      @include teal-hover;
+    }
+
+    &__link {
+      color: $white;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }

@@ -1,0 +1,125 @@
+@import "helpers/_functions";
+@import "helpers/_mixins";
+@import "helpers/_variables";
+
+// Extend common html styles
+%html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.5;
+    box-sizing: border-box;
+    *,*:before,*:after {
+        box-sizing: inherit;
+    }
+}
+// Styles for html element in theme
+html {
+  @extend %html;
+}
+  // Extend common body styles
+%body {
+    margin: 0;
+    padding: 0;
+    background-color: $light-grey !important;
+    max-width: 1280px;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+  // Styles for body element in theme
+body {
+    @extend %body;
+}
+
+.view-section,
+.view-overview {
+  background-color: $white;
+}
+  // Combine html styles and body styles for commonClass wrapper
+.sg-common {
+    @extend %html;
+    @extend %body;
+}
+
+*.sg {
+  font-family: 'inter', sans-serif !important;
+}
+
+h1.sg, h2.sg, h3.sg, h4.sg, h5.sg {
+  margin: 0.5 0 !important;
+}
+
+.sg.sg-header {
+  color: #fff;
+  background: #005961;
+}
+
+.sg.sg-wrapper {
+  padding: 10px 30px 60px 13px;
+}
+
+.sg.sg-top-nav,
+.sg-nav-visible {
+  background-color: #00363A !important;
+}
+
+.off-canvas-nav {
+height: 100%;
+/* width: 0; */
+/* right: 0; */
+padding-left: 1em;
+background-color: #005961;
+}
+
+.sg.sg-top-nav-menu li {
+  background-color: #00363A !important;
+}
+
+.sg.sg-top-nav-menu > li > a:hover, .sg.sg-top-nav-menu > li > a.active {
+  color: #222222;
+  background: #9FE1B5;
+}
+
+.sg.sg-top-nav-menu > li > a {
+  color: #E6F7D7;
+}
+
+.sg.sg-top-nav-menu li:hover ul li a:hover {
+  color: #fff;
+  background: #005961;
+}
+
+header.sg-section-header {
+  font-size: 12px;
+  color: #222 !important;
+  background: none !important;
+}
+
+.sg.sg-section-header h1 .sg-section-source {
+  color: #9FE1B5;
+}
+
+.sg.sg-section.main .sg.sg-section-header h1 .sg-section-source {
+  color: #9FE1B5;
+}
+
+.sg.sg-section.main .sg.sg-section-header {
+  border-bottom: $primary-color;
+  border-style: solid;
+  font-weight:600 !important;
+  font-size: 1.2em !important;
+}
+
+p.sg {
+  font-size: 18px;
+}
+
+.styleguide-color {
+  @include colour-combos;
+}
+
+.styleguide-color {
+  max-width: 25%;
+  @include colour-combos;
+}

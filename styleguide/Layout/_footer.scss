@@ -1,0 +1,145 @@
+/*
+Footer
+
+markup:
+<footer class="footer">
+    <div class="row">
+        <div class="col-12">
+            <div class="footer__border-top"></div>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-12">
+        <div class="footer__items-container">
+            <div class="footer__social-item">
+            </div>
+            <div class="footer__social-item">
+            </div>
+            <div class="footer__social-item">
+            </div>
+            <div class="footer__social-item">
+            </div>
+            <div class="footer__social-item">
+            </div>
+            <div class="footer__social-item">
+            </div>
+            <div class="footer__social-item">
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-12">
+            <div class="footer__found-a-problem">
+                <a class="footer__found-a-problem-link" href="https://my.leicester.gov.uk/service/3rd_Party_Feedback?Site=Leicester%20City%20Council%20-%20Home%20-%20Leicester%20City%20Council">Found a problem with this page?</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="footer__items-container footer__items-container--grey-bg">
+                <div class="footer__bottom-links-item">
+                    <a class="footer__bottom-links-link" href="https://www.leicester.gov.uk/contact-us/">Contact us</a>
+                </div>
+                <div class="footer__bottom-links-item">
+                    <a class="footer__bottom-links-link" href="https://www.leicester.gov.uk/your-council/how-we-work/our-website/accessibility/">Accessibility</a>
+                </div>
+                <div class="footer__bottom-links-item">
+                    <a class="footer__bottom-links-link" href="https://www.leicester.gov.uk/your-council/about-us/">About us</a>
+                </div>
+                <div class="footer__bottom-links-item">
+                    <a class="footer__bottom-links-link" href="https://www.leicester.gov.uk/your-council/how-we-work/our-website/cookies/">Cookies</a>
+                </div>
+                <div class="footer__bottom-links-item">
+                    <a class="footer__bottom-links-link" href="https://www.leicester.gov.uk/your-council/how-we-work/our-website/privacy/">Privacy / Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+sg-wrapper:
+<div class="container">
+  <div class="row>
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 5.2
+*/
+
+.footer {
+  padding-top: 1em;
+  &--content-builder {
+      margin-bottom: 3.2em;
+ //     @include media-breakpoint-down(md) {
+ //         margin-bottom: 4em;
+ //     }
+  }
+  &__border-top {
+    border-top: 0.3em solid $primary-color;
+    width: 100%;
+  }
+
+  &__items-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &--grey-bg {
+      background: $light-grey;
+    }
+  }
+
+  &__social {
+    &-item {
+      padding: 1em;
+      width: auto;
+ //     @include media-breakpoint-down(sm) {
+ //       padding: 0.5em;
+ //     }
+    }
+    &-icon {
+      height: 3.125em;
+      width: 3.125em;
+      &--big {
+        width: 13em;
+      }
+      &--facebook {
+        background: #3b579d;
+        border-radius: 50%;
+        fill: #fff;
+        padding: 0 0.4em 0 0.3em;
+      }
+    }
+  }
+
+  &__found-a-problem {
+    background: $primary-color;
+    padding: 1em 0;
+    text-align: center;
+    &-link {
+      color: $white;
+      margin: 0;
+      @include underline-only-on-hover;
+      @include hover-state {
+        color: $white;
+      }
+    }
+  }
+
+  &__bottom-links {
+    &-item {
+      padding: 1em;
+      width: auto;
+      text-align: center;
+//      @include media-breakpoint-down(sm) {
+//        width: 100%;
+//      }
+    }
+    &-link {
+      color: $grey;
+      @include underline-only-on-hover;
+    }
+  }
+}

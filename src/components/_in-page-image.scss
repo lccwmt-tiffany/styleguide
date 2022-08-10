@@ -1,0 +1,113 @@
+/*
+In-Page Images
+
+markup:
+<h4>Left Aligned</h4>  
+<div class="row">          
+  <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices tincidunt arcu non sodales neque sodales. Donec ac odio tempor orci dapibus ultrices in. Sed vulputate odio ut enim blandit. Sagittis id consectetur purus ut. Mauris a diam maecenas sed enim. In pellentesque massa placerat duis. Placerat duis ultricies lacus sed turpis tincidunt id. Consequat id porta nibh venenatis cras sed felis. Consequat nisl vel pretium lectus quam. In aliquam sem fringilla ut. Donec adipiscing tristique risus nec feugiat. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Euismod nisi porta lorem mollis aliquam. Vitae aliquet nec ullamcorper sit amet risus. Vestibulum morbi blandit cursus risus.</p>
+    <div class="in-page-image in-page-image--left">
+    <img class="in-page-image__image in-page-image__image--left" src="/styleguide/images/lionshead.jpg" alt="">
+    </div>
+  </div>
+</div>
+<h4>Right Aligned</h4> 
+<div class="row"> 
+  <div><p>At quis risus sed vulputate odio. Et odio pellentesque diam volutpat commodo sed egestas egestas fringilla. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Nunc mattis enim ut tellus elementum sagittis vitae. Sagittis purus sit amet volutpat consequat mauris nunc. Ut morbi tincidunt augue interdum velit euismod in. Maecenas pharetra convallis posuere morbi leo urna molestie at. Turpis egestas maecenas pharetra convallis posuere. Viverra aliquet eget sit amet tellus cras. Sit amet facilisis magna etiam tempor orci eu.</p>
+    <div class="in-page-image in-page-image--right">
+    <img class="in-page-image__image in-page-image__image--right" src="/styleguide/images/lionshead.jpg" alt="">
+    </div>
+  </div>
+</div>
+<h4>Centre Aligned</h4> 
+<div class="row">
+  <div><p>Turpis egestas integer eget aliquet nibh praesent tristique. Scelerisque felis imperdiet proin fermentum leo vel. Et pharetra pharetra massa massa ultricies. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. In iaculis nunc sed augue lacus viverra vitae congue. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Eu sem integer vitae justo. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Cursus turpis massa tincidunt dui ut. Rhoncus urna neque viverra justo. Dictumst quisque sagittis purus sit amet. Vitae purus faucibus ornare suspendisse sed. Condimentum id venenatis a condimentum vitae sapien pellentesque. Ut aliquam purus sit amet luctus venenatis lectus. Purus in mollis nunc sed id semper risus in. Proin fermentum leo vel orci porta non. Urna nunc id cursus metus aliquam eleifend mi in. Ullamcorper sit amet risus nullam eget felis eget nunc lobortis. Malesuada fames ac turpis egestas integer eget aliquet nibh praesent.</p>
+    <div class="in-page-image in-page-image--centre">
+    <img class="in-page-image__image in-page-image__image--centre" src="/styleguide/images/lionshead.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+sg-wrapper:
+<div class="row">
+  <div class="col-md-12 column">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 6.7
+*/
+
+.in-page-image {
+    display: inline-block;
+    &--left {
+      float: left;
+      margin-right: 2em;
+//      @include media-breakpoint-up(md){
+ //       width: 50%;
+ //     }
+    }
+    &--right {
+      float: right;
+      margin-left: 2em;
+//      @include media-breakpoint-up(md){
+//        width: 50%;
+//      }
+    }
+    &--center {
+      padding: 0.5em 0;
+      width: 100%;
+    }
+//    @include media-breakpoint-down(md) {
+//      float: none;
+//      margin: 0;
+//    }
+    &__image {
+      border: 2px solid $primary-color;
+      margin-bottom: 0.5em;
+      max-width: 100%;
+      height: 100%;
+      object-fit: contain;
+      &--left {
+        float: left;
+        height: 16.45em;
+      }
+      &--right {
+        float: right;
+        height: 16.45em;
+      }
+      &--center {
+        object-fit: contain;
+        margin-bottom: 0;
+        width: 100%;
+        max-height: 16.45em;
+      }
+//      @include media-breakpoint-down(md) {
+ //       float: none;
+ //     }
+    }
+    &__icon {
+      position: absolute;
+      color: $white;
+      display: block;
+      padding: 1em;
+      font-size: 1.2em;
+      mix-blend-mode: difference;
+      &--left {
+        float: left;
+      }
+      &--right {
+        float: right;
+ //       @include media-breakpoint-up(lg){
+ //         right: 1em;
+ //       }
+  //      @include media-breakpoint-down(md) {
+ //         float: left;
+ //       }
+      }
+    }
+    &__text {
+      border: 1px solid $light-grey;
+      padding: 0.5em;
+      margin: 0;
+    }
+}

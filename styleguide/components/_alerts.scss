@@ -1,0 +1,84 @@
+/*
+Alerts
+
+emergency - Emergency Alert
+warning - Warning Alert
+
+markup:
+<section aria-label="alert:">
+  <div class="alert alert--{$modifiers}">
+    <div class="row no-gutters">
+      <div class="col-11">
+        <p class="alert__title--{$modifiers}">Alert</p>
+          <p class="alert__text--{$modifiers}">This is an example of an alert <a href="#">Get more information</a>.</p>
+      </div>
+      <div class="col-1">
+        <a class="alert__close fa fa-times" href="#" title="Close"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+sg-wrapper:
+<div class="row">
+  <div class="col-12">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 6.1
+*/
+
+
+
+.alert {
+  background-color: $standard-alert;
+  padding: 0.625em 1.25em;
+  margin: 1em 0;
+  &--warning {
+    background-color: $warning-alert;
+  }
+  &--emergency {
+    background-color: $emergency-alert;
+    padding: 1em;
+  }
+  &__title {
+    @include no-margin-padding;
+    font-weight: 700;
+    font-size: 1.1em;
+    &--emergency {
+      color: $white;
+      font-size: 2em;
+      padding-bottom: 0.5em;
+    }
+  }
+  &__button {
+    display: inline-block;
+    padding: 1em;
+    background: $white;
+    color: $grey;
+    font-weight: 700;
+    @include hover-state {
+      text-decoration: underline;
+      color: $primary-color;
+    }
+  }
+  &__text {
+    @include no-margin-padding;
+    &--emergency {
+      color: $white;
+    }
+  }
+  &__link {
+    @include teal-links;
+    font-weight: 700;
+  }
+  &__close {
+    color: $grey;
+    text-decoration: none;
+    float: right;
+    @include hover-state {
+      color: light($grey);
+    }
+  }
+}

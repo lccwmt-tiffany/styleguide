@@ -1,0 +1,129 @@
+/*
+Off Canvas Nav
+
+markup:
+<nav aria-label="main" class="off-canvas-nav--open" id="off-canvas-nav">
+  <ul class="off-canvas-nav__list">
+    <li class="off-canvas-nav__item">
+      <a class="off-canvas-nav__link" href="/your-council/">Your council</a>
+    </li>
+    <li class="off-canvas-nav__item">
+      <a class="off-canvas-nav__link" href="/your-community/">Your community</a>
+    </li>
+    <li class="off-canvas-nav__item">
+      <a class="off-canvas-nav__link" href="/your-environment/">Your environment</a>
+    </li>
+    <li class="off-canvas-nav__item">
+      <a class="off-canvas-nav__link" href="/health-and-social-care/">Health and social care</a>
+    </li>
+    <li class="off-canvas-nav__item">
+      <a class="off-canvas-nav__link" href="/planning-and-building/">Planning and building</a>
+    </li>
+    <li class="off-canvas-nav__item">
+      <a class="off-canvas-nav__link" href="/business/">Business</a>
+    </li>
+    <li class="off-canvas-nav__item">
+      <a class="off-canvas-nav__link" href="/schools-and-learning/">Schools and learning</a>
+    </li>
+    <li class="off-canvas-nav__item">
+      <a class="off-canvas-nav__link" href="/transport-and-streets/">Transport and streets</a>
+    </li>
+    <li class="off-canvas-nav__item">
+      <a class="off-canvas-nav__link" href="/leisure-and-culture/">Leisure and culture</a>
+    </li>
+    <li class="off-canvas-nav__divider">
+    </li>
+    <li class="off-canvas-nav__item">
+      <a class="off-canvas-nav__link" href="/contact-us/">Contact us</a>
+    </li>
+    <li class="off-canvas-nav__item">
+      <a class="off-canvas-nav__link" href="https://news.leicester.gov.uk/">News</a>
+    </li>
+  </ul>
+</nav>
+
+    sg-wrapper:
+<nav class="off-canvas-nav">
+   <sg-wrapper-content/>
+</nav>
+
+Styleguide 5.4
+*/
+
+.overlay {
+   /*position: fixed; */
+  display: none;
+  width: 25%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 3;
+  cursor: pointer;
+  transition: fade 0.2s;
+  &--on {
+    display: block;
+  }
+}
+
+.off-canvas-nav {
+  /* overflow-x: hidden;
+  visibility: hidden; */
+  transition: 0.5s;
+  height: 100%;
+  width: 25%;
+   /*position: fixed; */
+  z-index: 3;
+  top: 0;
+  right: 0;
+  padding-left: 1em;
+  background-color: $primary-color;
+
+ // @include media-breakpoint-down(sm) {
+ //   padding-top: 15px;
+ // }
+
+  &--open {
+    width: 17em;
+    visibility: visible;
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.1em;
+    line-height: 0.5em;
+    padding: 1em;
+    float: right;
+  }
+
+  &__list {
+    @include no-margin-padding;
+    width: 12.5em;
+  }
+
+  &__item {
+    height: 3.12em;
+    vertical-align: middle;
+    @include no-bullets;
+    @include no-margin-padding;
+  }
+
+  &__link {
+    line-height: 3em;
+    padding-left: 1em;
+    text-decoration: none;
+    display: block;
+  }
+
+  &__link, &__button {
+    color: $white;
+    @include hover-state {
+      @include teal-hover
+    }
+  }
+
+  &__divider {
+    border-bottom: 1px solid $white;
+    margin-left: 0.5em;
+    @include no-bullets;
+  }
+}

@@ -1,0 +1,59 @@
+/*
+Persona Parts
+
+Components that are used for creating content on pages
+
+markup:
+<div class="persona-part">
+  <img class="persona-part__image" src="https://alpha.leicester.gov.uk/media/176947/kids-swimming.jpg?mode=crop&amp;quality=90&amp;width=200&amp;heightratio=1" alt="">
+    <div class="persona-part__title">
+        <span class="persona-part__title-text">Find your nearest leisure centre</span>
+    </div>
+    <div class="persona-part__text">
+        <span>
+            Find your nearest Leisure centre to arrange your swimming lessons today!
+        </span>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 offset-md-6">
+          <a class="teal-button__link" href="https://alpha.leicester.gov.uk/leisure-and-culture/sport-and-leisure/find-an-activity/sports-and-leisure-centres/">
+              <div class="teal-button">
+                  Find a leisure centre
+              </div>
+          </a>
+      </div>
+    </div>
+</div>
+
+sg-wrapper:
+<div class="row">
+  <div class="col-12">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 6.9
+*/
+
+.persona-part {
+  margin-top: 2em;
+  margin-left: 1.5em;
+  &__title {
+    font-size: 1.3em;
+    font-weight: 600;
+    position: relative;
+  }
+  &__image {
+    border-radius: 50%;
+    border: 1px solid $secondary-color;
+    height: 9.3em;
+    float: left;
+    margin-top: -1.5em;
+    margin-left: -2em;
+  }
+  &__text {
+    border: 1px solid $secondary-color;
+    padding: 1em 1em 1em 7.5em;
+    bottom: 0;
+  }
+}

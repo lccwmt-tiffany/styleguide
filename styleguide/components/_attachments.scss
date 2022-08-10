@@ -1,0 +1,53 @@
+/*
+Attachments
+
+Components that are used for creating content on pages
+
+Markup:
+<div id="attachments" class="jump-to">
+  <h2>Attachments</h2>
+  <ul class="attachments">
+    <li class="attachments__item">
+      <a href="#" class="attachments__link">
+        <div class="row">
+          <div class="col-3 col-sm-2 col-lg-2">
+            <span class="attachments__icon fa fa-paperclip"></span>
+          </div>
+          <div class="col-9 col-sm-10 col-lg-10 d-flex align-items-center">
+            <span class="attachments__text">Attachment Style: (Date of publication YYYY) [document format - size in mb]</span>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+sg-wrapper:
+<div class="row">
+  <div class="col-12">
+    <sg-wrapper-content/>
+  </div>
+</div>
+
+Styleguide 6.2
+*/
+
+.attachments {
+  @include no-bullets;
+  &__item {
+    padding: 0.5em 0;
+  }
+  &__link {
+    @include teal-links;
+    @include underline-only-on-hover;
+    text-align: center;
+  }
+  &__icon {
+    color: $secondary-color;
+    font-size: 3em;
+  }
+  &__text {
+    font-weight: 600;
+    text-align: left;
+  }
+}
